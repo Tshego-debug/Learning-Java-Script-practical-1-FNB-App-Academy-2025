@@ -1,0 +1,80 @@
+body {
+  background: #fce4ec; /* light pink */
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+table {
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+td {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+td:active {
+  transform: scale(0.95);
+}
+
+/* Input box at top */
+#inputBox {
+  width: 100%;
+  height: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  border: none;
+  background: #facadd; /* soft pink */
+  color: #4a148c; /* deep purple text */
+  text-align: right;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Digit buttons */
+.digitButton {
+  background: linear-gradient(135deg, #f197b7, #f33b79); /* pink gradient */
+  color: white;
+  border-radius: 10px;
+}
+
+/* Operator buttons */
+.operatorButton {
+  background: linear-gradient(135deg, #c674d4, #5b3a94); /* purple gradient */
+  color: white;
+  border-radius: 10px;
+}
+
+/* Equals button */
+.operatorButton[colspan="4"] {
+  background: linear-gradient(135deg, #df96af, #7a0437); /* bold pink-red */
+  color: white;
+}
+
+/* AC button */
+.ACButton {
+  background: linear-gradient(135deg, #b0bec5, #78909c); /* grey-blue gradient */
+  color: #263238;
+  border-radius: 10px;
+}
+
+/* Adjust for 0 button spanning two columns */
+td[colspan="2"] {
+  width: 160px;
+}
